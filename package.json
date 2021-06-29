@@ -34,6 +34,8 @@
     "echarts-wordcloud": "^2.0.0",
     "fuse.js": "^6.4.6",
     "mockjs": "^1.1.0",
+    "normalize.css": "^8.0.1",
+    "vue-image-crop-upload": "^3.0.3",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
