@@ -1,47 +1,37 @@
 import Vue from 'vue'
 
-import App from './App'//原为import App from './App.vue'
+import App from './App' // 原为import App from './App.vue'
 import store from './store'
-import router from './router/routers'//原为:import router from './router'
+import router from './router/routers' // 原为:import router from './router'
 
-//某些网站为了辨别用户身份、进行 session 跟踪而储存在用户本地终端上的数据（通常经过加密）。
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie' // 某些网站为了辨别用户身份、进行 session 跟踪而储存在用户本地终端上的数据（通常经过加密）。
 
 import 'normalize.css/normalize.css'
 
-//element-ui
-import Element from 'element-ui'
-import "element-ui/lib/theme-chalk/index.css"
+import Element from 'element-ui' // element-ui
+import 'element-ui/lib/theme-chalk/index.css'
 
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 
-// 数据字典  待引入
-import dict from './components/Dict'
+import dict from './components/Dict' // 数据字典  待引入
 
-// 权限指令 均已引入，暂无调用
-import checkPer from '@/utils/permission'
+import checkPer from '@/utils/permission' // 权限指令 均已引入，暂无调用
 import permission from './components/Permission'
 import './assets/styles/element-variables.scss'
-// global css
-import './assets/styles/index.scss'
 
-//代码高亮
+import './assets/styles/index.scss' // global css
+
 import VueHighlightJS from 'vue-highlightjs'
 import 'highlight.js/styles/atom-one-dark.css'
 
-
 import './assets/icons' // icon
+
 import './router/index' // permission control
 import 'echarts-gl'
 
-
-
-//axios
-import axios from 'axios'
+import axios from 'axios' // axios
 Vue.prototype.$axios = axios
-
-
 
 Vue.use(checkPer)
 Vue.use(VueHighlightJS)
