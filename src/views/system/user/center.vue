@@ -7,17 +7,19 @@
             <span>个人信息</span>
           </div>
           <div>
+            <!--
             <div style="text-align: center">
               <div class="el-upload">
                 <img :src="user.avatarName ? baseApi + '/avatar/' + user.avatarName : Avatar" title="点击上传头像" class="avatar" @click="toggleShow">
                 <myUpload
-                  v-model="show"
-                  :headers="headers"
-                  :url="updateAvatarApi"
-                  @crop-upload-success="cropUploadSuccess"
+                    v-model="show"
+                    :headers="headers"
+                    :url="updateAvatarApi"
+                    @crop-upload-success="cropUploadSuccess"
                 />
               </div>
             </div>
+            -->
             <ul class="user-info">
               <li><div style="height: 100%"><svg-icon icon-class="login" /> 登录账号<div class="user-right">{{ user.username }}</div></div></li>
               <li><svg-icon icon-class="user1" /> 用户昵称 <div class="user-right">{{ user.nickName }}</div></li>
@@ -27,7 +29,7 @@
               <li>
                 <svg-icon icon-class="anq" /> 安全设置
                 <div class="user-right">
-                  <a @click="$refs.pass.dialog = true">修改密码</a>
+                  <a @click="$refs.pass.dialog = true">修改密码</a> &nbsp;
                   <a @click="$refs.email.dialog = true">修改邮箱</a>
                 </div>
               </li>
@@ -117,7 +119,7 @@ import { editUser } from '@/api/system/user'
 import Avatar from '@/assets/images/avatar.png'
 export default {
   name: 'Center',
-  components: { updatePass, updateEmail, myUpload },
+  components: { updatePass, updateEmail }, // myUpload
   mixins: [crud],
   data() {
     // 自定义验证
