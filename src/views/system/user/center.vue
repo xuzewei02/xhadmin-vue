@@ -107,7 +107,6 @@
 </template>
 
 <script>
-import myUpload from 'vue-image-crop-upload'
 import { mapGetters } from 'vuex'
 import updatePass from './center/updatePass'
 import updateEmail from './center/updateEmail'
