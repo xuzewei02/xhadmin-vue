@@ -11,13 +11,14 @@
       <el-table-column prop="mobileNumber" label="手机号码" />
       <el-table-column prop="name" label="姓名" />
       <el-table-column prop="identityNumber" label="证件号码" />
-      <el-table-column prop="status" label="状态" align="center">
+      <el-table-column prop="status" label="状态" align="center" >
         <template slot-scope="scope">
           <el-switch
-              v-model="scope.row.enabled"
+              v-model="scope.row.status"
+              :disabled="scope.row.id === 1"
               active-color="#409EFF"
               inactive-color="#F56C6C"
-              @change="changeEnabled(scope.row, scope.row.enabled)"
+              @change="changeEnabled(scope.row, scope.row.status,)"
           />
         </template>
       </el-table-column>
@@ -89,11 +90,11 @@ export default {
           // eslint-disable-next-line no-undef
           this.crud.notify(this.dict.label.member_status[val] + '成功', 'success')
         }).catch(err => {
-          data.enabled = !data.enabled
+          data.status = !data.status
           console.log(err.data.message)
         })
       }).catch(() => {
-        data.enabled = !data.enabled
+        data.status = !data.status
       })
     }
   }

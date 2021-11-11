@@ -52,7 +52,7 @@
             v-for="item in memberStatus"
             :key="item.id"
             v-model="form.enabled"
-            :label="item.value === 'ENABLE'"
+            :label="item.value === 'true'"
         >
           {{ item.label }}
         </el-radio>
