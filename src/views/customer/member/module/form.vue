@@ -36,7 +36,7 @@
       <el-form-item
         v-if="form.pid !== 0"
         label="昵称"
-        prop="enabled"
+        prop="nickName"
       >
         <el-input
             v-model="form.nickName"
@@ -51,7 +51,7 @@
         <el-radio
             v-for="item in memberStatus"
             :key="item.id"
-            v-model="form.enabled"
+            v-model="form.status"
             :label="item.value === 'true'"
         >
           {{ item.label }}
